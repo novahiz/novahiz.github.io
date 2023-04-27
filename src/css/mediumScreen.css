@@ -1,0 +1,57 @@
+@media (min-width:800px) and (max-width:999px) {
+    .header {
+        position: relative;
+    }
+
+    .header .content {
+        overflow: auto;
+    }
+
+    .header .content .nav {
+        flex-direction: row;
+        position: absolute;
+        top: 49px;
+        right: 0;
+        left: 0;
+        height: 0px;
+        overflow: hidden;
+        transition: var(--main-transition);
+        z-index: 10;
+    }
+
+    .header .content .nav.active {
+        height: 50px;
+    }
+
+    .header .content .nav .list {
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .header .content .nav .list::before,
+    .header .content .nav .list::after,
+    .header .content .nav .list .item a::after {
+        display: none;
+    }
+
+    .header #burger {
+        display: block;
+    }
+
+    section.hero {
+        position:relative;
+        height: 750px;
+    }
+
+    section.hero .hero-content .left .left-content .btn-group {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    section.hero .hero-content .left .left-content .btn-group a {
+        margin: 0 100px;
+    }
+}
